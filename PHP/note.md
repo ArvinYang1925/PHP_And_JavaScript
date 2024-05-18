@@ -1,7 +1,3 @@
-當然，以下是以 Markdown 格式輸出的 PHP 資料型別 (Data Types) 的介紹：
-
----
-
 # PHP 資料型別 (Data Types)
 
 在 PHP 中，資料型別是變數存儲和操作數據的基本方式。以下是 PHP 中的主要資料型別：
