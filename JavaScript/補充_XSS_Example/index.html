@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Example</title>
+</head>
+
+<body>
+    <!-- let userInput = "<img src='x' onerror='alert(1)'>"; // 模擬用戶輸入 -->
+    <form id="commentForm">
+        <textarea id="commentInput" placeholder="Enter your comment"></textarea>
+        <button type="button" onclick="submitComment()">Submit</button>
+    </form>
+    <div id="commentsSection"></div>
+    <script>
+        function submitComment() {
+            let commentInput = document.getElementById("commentInput").value;
+            let commentsSection = document.getElementById("commentsSection");
+            commentsSection.innerHTML += `<p>${commentInput}</p>`;
+        }
+    </script>
+</body>
+
+</html>
