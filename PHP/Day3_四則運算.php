@@ -19,3 +19,12 @@ $kilogram = 10;
 echo "起跳價：" . $start . PHP_EOL;
 echo "公里數：" . $kilogram . PHP_EOL;
 echo "最終收費：" . ($start + 10 * $kilogram);
+
+
+$value = "123";
+
+if (is_nan($value)) {
+    echo "The value is NaN";
+} else {
+    echo "The value is a number";
+}

@@ -35,3 +35,38 @@ var_dump($var_1);
 var_dump($var_2);
 var_dump($var_3);
 var_dump($var_4);
+
+
+// 使用 define() 宣告常數
+
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', 'password');
+define('DB_NAME', 'database');
+
+// 在條件語句中使用 define()
+if (!defined('APP_ENV')) {
+    define('APP_ENV', 'development');
+}
+echo defined('APP_ENV');
+
+echo DB_HOST . PHP_EOL; // 輸出: localhost
+echo APP_ENV . PHP_EOL;  // 輸出: development
+
+// 使用 const 宣告常數
+
+const API_KEY = '1234567890';
+const DEBUG_MODE = true;
+
+// const 不能在條件語句中使用，這會導致語法錯誤
+// if (!defined('LOG_LEVEL')) {
+//     const LOG_LEVEL = 'debug'; // 這行會報錯
+// }
+
+echo API_KEY . PHP_EOL;  // 輸出: 1234567890
+echo DEBUG_MODE . PHP_EOL;  // 輸出: 1
+
+// 魔術常數（Magic Constants）
+
+echo __LINE__ . PHP_EOL;
+echo __FILE__ . PHP_EOL;
